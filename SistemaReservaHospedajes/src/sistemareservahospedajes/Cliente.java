@@ -18,6 +18,13 @@ public class Cliente {
     public Cliente() {
     }
 
+    public Cliente(String nombre, String apellidos, String dni, int edad) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.dni = dni;
+        this.edad = edad;
+    }
+
     public String getCodigoCliente() {
         return codigoCliente;
     }
