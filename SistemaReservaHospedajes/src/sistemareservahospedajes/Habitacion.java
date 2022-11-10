@@ -8,14 +8,25 @@ package sistemareservahospedajes;
  *
  * @author Alejandro
  */
-public class Habitacion {
+public class Habitacion extends Cliente{
     private String numeroHabitacion;
     private String tipoHabitacion;
     private float costoHabitacion;
-    private boolean estadoHabitacion;
 
     public Habitacion() {
     }
+
+    public Habitacion(String numeroHabitacion, String tipoHabitacion, float costoHabitacion, String nombre, String apellidos, String dni, String telefono) {
+        super(nombre, apellidos, dni, telefono);
+        this.numeroHabitacion = numeroHabitacion;
+        this.tipoHabitacion = tipoHabitacion;
+        this.costoHabitacion = costoHabitacion;
+    }
+
+    public Habitacion(String nombre, String apellidos, String dni, String telefono) {
+        super(nombre, apellidos, dni, telefono);
+    }
+    
 
     public String getNumeroHabitacion() {
         return numeroHabitacion;
@@ -31,14 +42,6 @@ public class Habitacion {
 
     public void setTipoHabitacion(String tipoHabitacion) {
         this.tipoHabitacion = tipoHabitacion;
-    }
-
-    public boolean isEstadoHabitacion() {
-        return estadoHabitacion;
-    }
-
-    public void setEstadoHabitacion(boolean estadoHabitacion) {
-        this.estadoHabitacion = estadoHabitacion;
     }
 
     public float getCostoHabitacion() {

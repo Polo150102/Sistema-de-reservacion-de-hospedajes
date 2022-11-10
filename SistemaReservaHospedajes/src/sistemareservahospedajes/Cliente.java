@@ -13,16 +13,24 @@ public class Cliente {
     private String nombre;
     private String apellidos;
     private String dni;
-    private int edad;
+    private String telefono;
 
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellidos, String dni, int edad) {
+    public Cliente(String nombre, String apellidos, String dni, String telefono) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dni = dni;
-        this.edad = edad;
+        this.telefono = telefono;
+    }
+    
+    public Cliente(String codigoCliente, String nombre, String apellidos, String dni, String telefono) {
+        this.codigoCliente = codigoCliente;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.dni = dni;
+        this.telefono = telefono;
     }
 
     public String getCodigoCliente() {
@@ -57,14 +65,15 @@ public class Cliente {
         this.dni = dni;
     }
 
-    public int getEdad() {
-        return edad;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
-    
+
+
     
     
 }

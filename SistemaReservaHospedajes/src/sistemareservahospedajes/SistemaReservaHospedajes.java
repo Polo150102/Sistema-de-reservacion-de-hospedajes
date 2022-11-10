@@ -15,6 +15,9 @@ public class SistemaReservaHospedajes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        /*FormularioPlataforma formPlataforma = new FormularioPlataforma();
+        formPlataforma.setVisible(true);*/
+        
         Menu menu = new Menu();
         menu.setVisible(true);
     }

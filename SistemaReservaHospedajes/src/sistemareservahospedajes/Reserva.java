@@ -9,9 +9,9 @@ package sistemareservahospedajes;
  * @author Alejandro
  */
 
-public class Reserva {
+public class Reserva extends Habitacion{
     
-   //HEREDAR DE HABITACION
+   //CLASE HIJA DE HABITACION
    private String codigoReserva;
    private int cantidadClientes;
    private String fechaReserva;
@@ -20,9 +20,27 @@ public class Reserva {
    private String fechaCancelacion;
    private float montoTotal;
 
-    public Reserva() {
+    public Reserva(){
         
     }
+
+    public Reserva(String nombre, String apellidos, String dni, String telefono) {
+        super(nombre, apellidos, dni, telefono);
+    }
+    
+    
+    //Para generar el archivo con todas las reservas de habitacion
+    public Reserva(String codigoReserva, int cantidadClientes, String fechaReserva, String fechaIngreso, float montoTotal, String numeroHabitacion, 
+            String tipoHabitacion, float costoHabitacion, String nombre, String apellidos, String dni, String telefono){
+        super(numeroHabitacion, tipoHabitacion, costoHabitacion, nombre, apellidos, dni, telefono);
+        this.codigoReserva = codigoReserva;
+        this.cantidadClientes = cantidadClientes;
+        this.fechaReserva = fechaReserva;
+        this.fechaIngreso = fechaIngreso;
+        this.montoTotal = montoTotal;
+    }
+
+    
 
     public String getCodigoReserva() {
         return codigoReserva;
